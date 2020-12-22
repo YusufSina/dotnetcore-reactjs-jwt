@@ -26,6 +26,7 @@ namespace Backend.API.Controllers
         {
             return "Hello World!";
         }
+
         [HttpPost]
         public async Task<ActionResult<BaseResponseDto<object>>> Create([FromBody] UserCreateDto user)
         {

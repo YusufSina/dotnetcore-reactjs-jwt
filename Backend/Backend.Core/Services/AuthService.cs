@@ -56,7 +56,7 @@ namespace Backend.Core.Services
 
         public async Task Logout()
         {
-            throw new NotImplementedException();
+            await _signInManager.SignOutAsync();
         }
 
         private string generateJwtToken(User user)
