@@ -23,16 +23,16 @@ Bu durum üzerinde düşündüm fakat uygulamanın Docker for Windows mu yoksa b
 ## Screenshots
 
 *Giriş Sayfası*
-![Giriş sayfası](./screenshot1.png)
+![Giriş sayfası](.\screenshot1.png)
 
 *Kayıt sayfası*
-![Kayıt sayfası](./screenshot2.png)
+![Kayıt sayfası](.\screenshot2.png)
 
 *Kayıt sayfası validasyon*
-![Kayıt sayfası validasyon](./screenshot3.png)
+![Kayıt sayfası validasyon](.\screenshot3.png)
 
 *Giriş sayfası validasyon*
-![Giriş sayfası](./screenshot4.png)
+![Giriş sayfası](.\screenshot4.png)
 
 *Dashboard sayfası*
-![Dashboard sayfası](./screenshot5.png)
+![Dashboard sayfası](.\screenshot5.png)
