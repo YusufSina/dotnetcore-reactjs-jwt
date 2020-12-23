@@ -23,16 +23,21 @@ Bu durum üzerinde düşündüm fakat uygulamanın Docker for Windows mu yoksa b
 ## Screenshots
 
 *Giriş Sayfası*
-<img src="screenshot1.png" alt="Giriş sayfası" width="800" />
+
+<img src="./screenshot1.png" width="800" />
 
 *Kayıt sayfası*
-<img src="screenshot2.png" alt="Kayıt sayfası" width="800" />
+
+<img src="./screenshot2.png" width="800" />
 
 *Kayıt sayfası validasyon*
-<img src="screenshot3.png" alt="Kayıt sayfası validasyon" width="800" />
+
+<img src="./screenshot3.png" width="800" />
 
 *Giriş sayfası validasyon*
-<img src="screenshot4.png" alt="Giriş sayfası validasyon" width="800" />
+
+<img src="./screenshot4.png" width="800" />
 
 *Dashboard sayfası*
-<img src="screenshot5.png" alt="Dashboard sayfası" width="800" />
+
+<img src="./screenshot5.png" width="800" />
