@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route, Redirect } from 'react-router-dom';
 import history from '../history/history';
 
 import Login from '../pages/login/Login';
@@ -13,13 +13,20 @@ function PublicRouter() {
   return (
     <Router history={history}>
       <Switch>
+        <Route
+          exact
+          path="/"
+          render={() =>
+            (auth ? <Redirect to="/dashboard" /> : <Redirect to="/login" />)
+          }
+        />
         <Route path="/login">
           <Login />
         </Route>
         <Route path="/register">
           <Register />
         </Route>
-        <PrivateRouter Component={Dashboard} path="/dashboard" auth={auth} />
+        <PrivateRouter Component={Dashboard} to="/dashboard" auth={auth} />
       </Switch>
     </Router>
   );
