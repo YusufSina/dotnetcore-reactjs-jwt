@@ -46,7 +46,7 @@ namespace Backend.Core.Services
             }
 
 
-            response.Errors.Add("NoEmailOrPass", "Email veya şifre hatalı");
+            response.Errors.Add("NoEmailOrPass", "Email or password is wrong!");
 
 
             return response;

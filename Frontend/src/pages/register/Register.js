@@ -11,7 +11,6 @@ import Label from '../../domain/Label/Label';
 import Button from '../../domain/Button/Button';
 import Spinner from '../../domain/Spinner/Spinner';
 import Alert from '../../domain/Alert/Alert';
-import { SET_ERRORS } from '../../store/User/user.types';
 
 function Register() {
   const [email, setEmail] = useState('');

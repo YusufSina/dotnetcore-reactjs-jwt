@@ -22,7 +22,6 @@ function Login() {
   const auth = useSelector(state => state.auth);
 
   const submit = () => {
-    console.log('submite');
     dispatch(login({ email, password }));
     setSubmitted(true);
   };

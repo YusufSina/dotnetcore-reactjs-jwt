@@ -53,7 +53,7 @@ namespace Backend.Core.Services
 
             if (user == null)
             {
-                response.Errors.Add("UserNotFound", "Kullanıcı bulunamadı.");
+                response.Errors.Add("UserNotFound", "User couldn't have been found!");
                 return response;
             }
 
