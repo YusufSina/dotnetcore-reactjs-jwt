@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import {
   login,
+  clearErrors,
 } from '../../store/Auth/auth.actions';
 
 import Input from '../../domain/Input/Input';
@@ -24,6 +25,10 @@ function Login() {
   const submit = () => {
     dispatch(login({ email, password }));
     setSubmitted(true);
+  };
+
+  const setErrors = () => {
+    dispatch(clearErrors());
   };
 
   const isInputValid = value => {
@@ -59,7 +64,7 @@ function Login() {
                 </div>
                 <Button btnType="success" text="Giriş yap" float="right" onClick={submit} disabled={!(email && password)} />
                 <Link to="/register">
-                  <Button btnType="light" text="Kayıt ol" float="left" />
+                  <Button btnType="light" text="Kayıt ol" float="left" onClick={setErrors} />
                 </Link>
               </form>
             </div>

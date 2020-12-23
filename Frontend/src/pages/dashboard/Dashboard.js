@@ -13,7 +13,7 @@ function Dashboard() {
 
   return (
     <div>
-      Welcome to the jungle!
+      Welcome to the dashboard!
       <br />
       <Button btnType="light" text="Çıkış" onClick={clickLogout} />
     </div>

@@ -13,6 +13,13 @@ function PublicRouter() {
   return (
     <Router history={history}>
       <Switch>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/register">
+          <Register />
+        </Route>
+        <PrivateRouter exact Component={Dashboard} path="/dashboard" auth={auth} />
         <Route
           exact
           path="/"
@@ -20,13 +27,6 @@ function PublicRouter() {
             (auth ? <Redirect to="/dashboard" /> : <Redirect to="/login" />)
           }
         />
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/register">
-          <Register />
-        </Route>
-        <PrivateRouter Component={Dashboard} to="/dashboard" auth={auth} />
       </Switch>
     </Router>
   );

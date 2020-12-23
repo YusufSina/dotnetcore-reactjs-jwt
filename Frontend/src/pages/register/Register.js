@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import {
   createUser,
+  clearErrors,
 } from '../../store/User/user.actions';
 
 import Input from '../../domain/Input/Input';
@@ -22,6 +23,10 @@ function Register() {
   const submit = async () => {
     dispatch(createUser({ email, password }));
     setSubmitted(true);
+  };
+
+  const setErrors = () => {
+    dispatch(clearErrors());
   };
 
   const isInputValid = value => {
@@ -57,7 +62,7 @@ function Register() {
                 </div>
                 <Button btnType="success" text="Kayıt ol" float="right" onClick={submit} disabled={!(email && password)} />
                 <Link to="/login">
-                  <Button btnType="light" text="Geri" float="left" onClick={() => { }} />
+                  <Button btnType="light" text="Geri" float="left" onClick={setErrors} />
                 </Link>
               </form>
             </div>

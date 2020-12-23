@@ -1,4 +1,4 @@
-import { SET_LOADING, SET_ERRORS } from './user.types';
+import { SET_USER_LOADING, SET_USER_ERRORS } from './user.types';
 
 const INITIAL_STATE = {
   loading: false,
@@ -8,11 +8,11 @@ const INITIAL_STATE = {
 
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SET_LOADING:
+    case SET_USER_LOADING:
       return {
         ...state, loading: action.payload,
       };
-    case SET_ERRORS:
+    case SET_USER_ERRORS:
       return {
         ...state,
         error: action.payload,

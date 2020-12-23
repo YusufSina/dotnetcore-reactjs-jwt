@@ -1,4 +1,4 @@
-import { SET_LOADING, SET_ERRORS, SET_USER } from './auth.types';
+import { SET_AUTH_LOADING, SET_AUTH_ERRORS, SET_AUTH_USER } from './auth.types';
 
 const INITIAL_STATE = {
   loading: false,
@@ -9,18 +9,18 @@ const INITIAL_STATE = {
 
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SET_LOADING:
+    case SET_AUTH_LOADING:
       return {
         ...state,
         loading: action.payload,
       };
-    case SET_ERRORS:
+    case SET_AUTH_ERRORS:
       return {
         ...state,
         error: action.payload,
         hasError: action.payload.length !== 0,
       };
-    case SET_USER:
+    case SET_AUTH_USER:
       return {
         ...state,
         user: action.payload,
