@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../store/Auth/auth.actions';
 
-import Button from '../../domain/Button/Button';
+import Button from '../../components/Button/Button';
 
 function Dashboard() {
   const dispatch = useDispatch();

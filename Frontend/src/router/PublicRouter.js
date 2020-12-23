@@ -21,7 +21,6 @@ function PublicRouter() {
         </Route>
         <PrivateRouter exact Component={Dashboard} path="/dashboard" auth={auth} />
         <Route
-          exact
           path="/"
           render={() =>
             (auth ? <Redirect to="/dashboard" /> : <Redirect to="/login" />)

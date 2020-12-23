@@ -7,11 +7,11 @@ import {
   clearErrors,
 } from '../../store/User/user.actions';
 
-import Input from '../../domain/Input/Input';
-import Label from '../../domain/Label/Label';
-import Button from '../../domain/Button/Button';
-import Spinner from '../../domain/Spinner/Spinner';
-import Alert from '../../domain/Alert/Alert';
+import Input from '../../components/Input/Input';
+import Label from '../../components/Label/Label';
+import Button from '../../components/Button/Button';
+import Spinner from '../../components/Spinner/Spinner';
+import Alert from '../../components/Alert/Alert';
 
 function Register() {
   const [email, setEmail] = useState('');
