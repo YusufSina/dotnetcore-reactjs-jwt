@@ -3,7 +3,7 @@ version: '3.1'
 services:
   
   sql1:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    build: ./Database
     hostname: sql1
     container_name: sql1
     environment:
@@ -13,6 +13,8 @@ services:
       - 1433:1433
     networks:
       - dc-backend
+    volumes:
+      - sqlvolume:/var/opt/mssql
     
 
   api:
@@ -27,5 +29,15 @@ services:
       - sql1
     restart: on-failure
 
+  react:
+    build: ./Frontend
+    image: react-app
+    container_name: reactapp
+    ports:
+      - 80:80 
+
 networks: 
   dc-backend:
+
+volumes:
+  sqlvolume:
