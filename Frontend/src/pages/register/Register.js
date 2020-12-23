@@ -3,27 +3,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import {
-  login,
-} from '../../store/Auth/auth.actions';
+  createUser,
+} from '../../store/User/user.actions';
 
 import Input from '../../domain/Input/Input';
 import Label from '../../domain/Label/Label';
 import Button from '../../domain/Button/Button';
 import Spinner from '../../domain/Spinner/Spinner';
 import Alert from '../../domain/Alert/Alert';
+import { SET_ERRORS } from '../../store/User/user.types';
 
-import './Login.css';
-
-function Login() {
+function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const dispatch = useDispatch();
-  const auth = useSelector(state => state.auth);
+  const user = useSelector(state => state.user);
 
-  const submit = () => {
-    console.log('submite');
-    dispatch(login({ email, password }));
+  const submit = async () => {
+    dispatch(createUser({ email, password }));
     setSubmitted(true);
   };
 
@@ -43,12 +41,12 @@ function Login() {
         <div className="col-md-2">{' '}</div>
         <div className="col-md-8">
           <div className="card">
-            <Spinner active={auth.loading} />
+            <Spinner active={user.loading} />
             <div className="card-header">
-              Giriş
+              Kayıt
             </div>
             <div className="card-body">
-              <Alert active={auth.hasError} errors={auth.error} />
+              <Alert active={user.hasError} errors={user.error} />
               <form className="text-left">
                 <div className="form-group">
                   <Label text="Email" />
@@ -58,9 +56,9 @@ function Login() {
                   <Label text="Şifre" />
                   <Input type="password" className={isInputValid(password)} placeholder="Şifre giriniz" value={password} onChange={setPassword} />
                 </div>
-                <Button btnType="success" text="Giriş yap" float="right" onClick={submit} disabled={!(email && password)} />
-                <Link to="/register">
-                  <Button btnType="light" text="Kayıt ol" float="left" />
+                <Button btnType="success" text="Kayıt ol" float="right" onClick={submit} disabled={!(email && password)} />
+                <Link to="/login">
+                  <Button btnType="light" text="Geri" float="left" onClick={() => { }} />
                 </Link>
               </form>
             </div>
@@ -72,4 +70,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;
